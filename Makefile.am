@@ -1,14 +1,14 @@
 ACLOCAL_AMFLAGS = -I m4
 
-fluxel_CFLAGS = $(systemd_CFLAGS)
-fluxel_LDADD = $(systemd_LIBS)
+pixelwut_CFLAGS = $(systemd_CFLAGS)
+pixelwut_LDADD = $(systemd_LIBS)
 
-libexec_PROGRAMS = fluxel
-fluxel_SOURCES = fluxel.c
+libexec_PROGRAMS = pixelwut
+pixelwut_SOURCES = pixelwut.c
 
-systemdsystemunit_DATA = fluxel.service fluxel.socket
+systemdsystemunit_DATA = pixelwut.service pixelwut.socket
 
-fluxel.service: fluxel.service.in
+pixelwut.service: pixelwut.service.in
 	sed 's|@libexecdir[@]|@libexecdir@|' $^ >$@
 
 SUBDIR = test

@@ -1,8 +1,8 @@
 AC_PREREQ([2.60])
-AC_INIT([fluxel], NY_GIT_VERSION, [mvs@nyantec.com])
+AC_INIT([pixelwut], NY_GIT_VERSION, [mvs@nyantec.com])
 
 AC_CONFIG_MACRO_DIR([m4])
-AC_CONFIG_SRCDIR([fluxel.c])
+AC_CONFIG_SRCDIR([pixelwut.c])
 AC_CONFIG_HEADERS([config.h])
 
 AC_CANONICAL_TARGET
