@@ -49,7 +49,7 @@ static int setup_sockets(int n) {
 	for (int i = 0; i < n; ++i) {
 		int fd = SD_LISTEN_FDS_START + i;
 
-		int s = sd_is_socket(fd, AF_UNSPEC, SOCK_STREAM, 1);
+		int s = sd_is_socket(fd, AF_UNSPEC, SOCK_STREAM, 0);
 		if (s < 0) {
 			fprintf(stderr, SD_ERR "sd_is_socket(): %m\n");
 			goto exit;
