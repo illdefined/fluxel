@@ -155,7 +155,7 @@ static int event_loop(int ep, int n) {
 			goto exit;
 		}
 
-		for (int i = 0; i < r; ++i) {
+		for (int i = 0; i < nev; ++i) {
 			if (events[i].data.fd < SD_LISTEN_FDS_START + n) {
 				if (handle_accept(ep, events + i)) {
 					fputs(SD_ERR "Could not handle connection\n", stderr);
