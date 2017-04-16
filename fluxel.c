@@ -112,6 +112,7 @@ static int handle_accept(int ep, struct epoll_event *ev) {
 		}
 
 		/* TODO: Initialise connection state */
+		fprintf(stderr, SD_DEBUG "Accepted connection %i\n", c);
 	} while (c >= 0);
 
 	r = -1;
@@ -192,6 +193,7 @@ int main(int argc, char *argv[]) {
 		goto exit;
 	}
 
+	fputs(SD_INFO "Setup complete. Ready to accept connections.\n", stderr);
 	sd_notify(0, "READY=1");
 
 	event_loop(ep, n);
