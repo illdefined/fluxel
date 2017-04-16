@@ -4,6 +4,7 @@ ExecStart=@libexecdir@/fluxel
 
 DynamicUser=true
 CapabilityBoundingSet=
+LimitNOFILE=65536
 
 PrivateTmp=true
 ProtectSystem=strict
