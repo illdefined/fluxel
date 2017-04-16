@@ -12,6 +12,7 @@ AM_INIT_AUTOMAKE([foreign tar-pax dist-xz no-dist-gzip])
 AC_PROG_CC([clang gcc cl cc])
 AC_PROG_CC_STDC
 AC_PROG_INSTALL
+AX_AM_JOBSERVER
 
 AC_DEFINE([_POSIX_C_SOURCE], [200809l], [Expose POSIX.1-2008 definitions.])
 AC_DEFINE([_XOPEN_SOURCE], [700], [Expose XSI extensions.])
