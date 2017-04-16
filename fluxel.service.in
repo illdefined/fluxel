@@ -1,0 +1,16 @@
+[Service]
+Type=notify
+ExecStart=@libexecdir@/fluxel
+
+DynamicUser=true
+CapabilityBoundingSet=
+
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+
+[Install]
+WantedBy=multi-user.target

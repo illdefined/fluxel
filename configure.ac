@@ -77,9 +77,11 @@ AC_FUNC_STRERROR_R
 AC_CHECK_FUNCS([accept4 epoll_ctl])
 
 PKG_CHECK_MODULES([systemd], [libsystemd])
+AC_SUBST([systemdsystemunitdir], [$($PKG_CONFIG --variable=systemdsystemunitdir systemd)])
 
 AC_CONFIG_FILES([
 	Makefile
 	test/Makefile
 ])
+
 AC_OUTPUT
