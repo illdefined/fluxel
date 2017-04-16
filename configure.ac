@@ -75,6 +75,8 @@ AX_APPEND_LINK_FLAGS([ \
 AC_FUNC_STRERROR_R
 AC_CHECK_FUNCS([accept4 epoll_ctl])
 
+PKG_CHECK_MODULES([systemd], [libsystemd])
+
 AC_CONFIG_FILES([
 	Makefile
 	test/Makefile
